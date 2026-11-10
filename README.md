@@ -53,8 +53,29 @@ cmake --build --preset release
 Résultat attendu :
 
 ```
-UIN-Campus — Système de gestion académique
-Version 0.1.0
+Le programme est interactif : il demande le nom d'un étudiant et ses notes, refuse les saisies invalides, puis affiche la moyenne, la mention et la décision.
+
+Exemple de session :
+
+```
+UIN-Campus 0.1.0 — Calcul de la moyenne d'un étudiant
+
+Nom de l'étudiant : Aïssata Moussa
+Nombre de notes (1 à 30) : 3
+   Note 1 : 12,5
+   Note 2 : 25
+   La note doit être comprise entre 0 et 20.
+   Note 2 : 14
+   Note 3 : 16
+
+----------------------------------------
+Étudiant                  Aïssata Moussa
+Nombre de notes                        3
+Moyenne                            14.17
+Mention                             Bien
+Décision                          Validé
+----------------------------------------
+```
 ```
 
 ## Structure du projet
