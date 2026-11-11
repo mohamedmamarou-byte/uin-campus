@@ -20,7 +20,10 @@ La version actuelle (0.1.0) est le **squelette** du projet : l'arborescence, la 
 Installation sous Ubuntu :
 
 ```
-sudo apt install g++ cmake ninja-build
+sudo apt update
+sudo apt install build-essential gcc-14 g++-14 \
+                 clang clangd clang-format clang-tidy lldb gdb \
+                 cmake ninja-build valgrind cppcheck git
 ```
 
 ## Versions des outils utilisées
