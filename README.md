@@ -69,11 +69,11 @@ UIN-Campus 0.1.0 — Calcul de la moyenne d'un étudiant
 -   Note 3 : 16
 
 ----------------------------------------
-Étudiant                  Aïssata Moussa
-Nombre de notes                        3
-Moyenne                            14.17
-Mention                             Bien
-Décision                          Validé
+- Étudiant                  Aïssata Moussa
+- Nombre de notes                        3
+- Moyenne                            14.17
+- Mention                             Bien
+- Décision                          Validé
 ----------------------------------------
 ```
 ```
