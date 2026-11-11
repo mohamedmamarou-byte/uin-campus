@@ -60,13 +60,13 @@ Exemple de session :
 ```
 UIN-Campus 0.1.0 — Calcul de la moyenne d'un étudiant
 
-Nom de l'étudiant : Aïssata Moussa
-Nombre de notes (1 à 30) : 3
-   Note 1 : 12,5
-   Note 2 : 25
-   La note doit être comprise entre 0 et 20.
-   Note 2 : 14
-   Note 3 : 16
+- Nom de l'étudiant : Aïssata Moussa
+- Nombre de notes (1 à 30) : 3
+-   Note 1 : 12,5
+-   Note 2 : 25
+-   La note doit être comprise entre 0 et 20.
+-   Note 2 : 14
+-   Note 3 : 16
 
 ----------------------------------------
 Étudiant                  Aïssata Moussa
