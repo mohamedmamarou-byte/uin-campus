@@ -56,28 +56,31 @@ cmake --build --preset release
 Résultat attendu :
 
 ```
-Le programme est interactif : il demande le nom d'un étudiant et ses notes, refuse les saisies invalides, puis affiche la moyenne, la mention et la décision.
+Le programme est interactif : il demande les information de l'etudant 
 
 Exemple de session :
 
 ```
-UIN-Campus 0.1.0 — Calcul de la moyenne d'un étudiant
+UIN-Campus 0.1.0 — Relevé d'un étudiant
 
-- Nom de l'étudiant : Aïssata Moussa
-- Nombre de notes (1 à 30) : 3
--   Note 1 : 12,5
--   Note 2 : 25
--   La note doit être comprise entre 0 et 20.
--   Note 2 : 14
--   Note 3 : 16
+Nom de l'étudiant : Mohamed
+Nombre d'UE (1 à 30) : 2
+ Note de l'UE 1 : 17
+ Coefficient de l'UE 1 : 18
+ La valeur doit être comprise entre 1 et 10.
+ Coefficient de l'UE 1 : 2
+ Note de l'UE 2 : 16
+ Coefficient de l'UE 2 : 2
 
-----------------------------------------
-- Étudiant                  Aïssata Moussa
-- Nombre de notes                        3
-- Moyenne                            14.17
-- Mention                             Bien
-- Décision                          Validé
-----------------------------------------
+--------------------------------------------
+Étudiant                             Mohamed
+Moyenne pondérée                       16.50
+Moyenne simple                         16.50
+Note min / max                 16.00 / 17.00
+Écart-type                              0.50
+UE validées                            2 / 2
+Mention                            Très bien
+--------------------------------------------
 ```
 ```
 
