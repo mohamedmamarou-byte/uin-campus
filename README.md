@@ -2,7 +2,7 @@
 
 Système de gestion académique de l'Université Islamique du Niger (UIN). Projet fil rouge du cours de Programmation Orientée Objet en C++ moderne.
 
-La version actuelle (0.1.0) est le **squelette** du projet : l'arborescence, la configuration des outils, et un premier programme qui affiche le titre et la version.
+La version actuelle (0.1.0) est un programme interactif qui établit le **relevé d'un étudiant** : saisie contrôlée des notes et des coefficients, moyennes simple et pondérée, statistiques (minimum, maximum, écart-type), nombre d'UE validées et mention.
 
 ## Fonctionnalités prévues
 
@@ -42,7 +42,7 @@ Version de développement (avec AddressSanitizer et UBSan) :
 ```
 cmake --preset debug
 cmake --build --preset debug
-./build/debug/uin-campus
+./build/debug/app/uin-campus
 ```
 
 Version optimisée :
@@ -50,15 +50,28 @@ Version optimisée :
 ```
 cmake --preset release
 cmake --build --preset release
-./build/release/uin-campus
+./build/release/app/uin-campus
 ```
 
-Résultat attendu :
+Options de la ligne de commande :
 
 ```
-Le programme est interactif : il demande les information de l'etudant 
+./build/debug/app/uin-campus --aide
+./build/debug/app/uin-campus --version
+```
 
-Exemple de session :
+Installation locale de la version optimisée :
+
+```
+cmake --install build/release --prefix ~/.local
+~/.local/bin/uin-campus --version
+```
+
+## Résultat attendu
+
+Le programme est interactif : il demande le nom de l'étudiant, le nombre d'UE, puis la note et le coefficient de chaque UE, et affiche le relevé.
+
+Exemple de session (le coefficient 18 est refusé, car il doit être compris entre 1 et 10) :
 
 ```
 UIN-Campus 0.1.0 — Relevé d'un étudiant
@@ -82,20 +95,25 @@ UE validées                            2 / 2
 Mention                            Très bien
 --------------------------------------------
 ```
+
+La commande `--version` affiche les informations de construction (le compilateur et la configuration dépendent de ta machine) :
+
+```
+UINCampus 0.1.0 — GCC 15.2.0 — C++ (202302) — Debug
 ```
 
 ## Structure du projet
 
 ```
 uin-campus/
-├── CMakeLists.txt        description de la construction
+├── CMakeLists.txt        description de la construction (racine)
 ├── CMakePresets.json     configurations debug et release
 ├── .clang-format         règles de mise en forme du code
 ├── .clang-tidy           règles d'analyse du code
 ├── .gitignore            fichiers ignorés par Git
-├── include/uincampus/    en-têtes (.hpp)
-├── src/                  implémentations (.cpp)
-├── app/                  programme principal (main.cpp)
+├── include/uincampus/    en-têtes (.hpp), dont uincampus.hpp (en-tête parapluie)
+├── src/                  implémentations (.cpp), CMakeLists.txt et config.hpp.in
+├── app/                  programme principal (main.cpp) et son CMakeLists.txt
 └── tests/                tests unitaires (à venir)
 ```
 
